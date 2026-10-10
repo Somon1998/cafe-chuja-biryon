@@ -10,6 +10,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   className?: string;
   align?: "left" | "center";
+  level?: "h1" | "h2";
 }
 
 export function SectionHeading({
@@ -18,7 +19,9 @@ export function SectionHeading({
   subtitle,
   className,
   align = "center",
+  level = "h2",
 }: SectionHeadingProps) {
+  const Title = level === "h1" ? "h1" : "h2";
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -32,9 +35,9 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? <SectionEyebrow>{eyebrow}</SectionEyebrow> : null}
-      <h2 className="font-display text-[1.65rem] font-medium leading-[1.15] tracking-tight text-foreground sm:text-[2rem] lg:text-[2.5rem]">
+      <Title className="font-display text-[1.65rem] font-medium leading-[1.15] tracking-tight text-foreground sm:text-[2rem] lg:text-[2.5rem]">
         {title}
-      </h2>
+      </Title>
       {subtitle ? (
         <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
           {subtitle}

@@ -23,6 +23,7 @@ import { CATEGORY_TONE, FULL_DESCRIPTION_SLUGS, getMenuImageFitClass } from "./p
 interface ProductCardProps {
   product: MenuItem;
   index?: number;
+  titleLevel?: "h2" | "h3";
 }
 
 function AvailabilityBadge({ available, label }: { available: boolean; label: string }) {
@@ -36,7 +37,12 @@ function AvailabilityBadge({ available, label }: { available: boolean; label: st
   );
 }
 
-export function ProductCard({ product, index = 0 }: ProductCardProps) {
+export function ProductCard({
+  product,
+  index = 0,
+  titleLevel = "h3",
+}: ProductCardProps) {
+  const Title = titleLevel === "h2" ? "h2" : "h3";
   const { t, locale } = useLanguage();
   const [orderModalOpen, setOrderModalOpen] = useState(false);
   const hasImage = Boolean(product.image);
@@ -119,9 +125,9 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           />
         </div>
 
-        <h3 className="line-clamp-2 break-words font-display text-[1.2rem] font-medium leading-snug tracking-tight text-foreground sm:text-[1.3rem]">
+        <Title className="line-clamp-2 break-words font-display text-[1.2rem] font-medium leading-snug tracking-tight text-foreground sm:text-[1.3rem]">
           {displayName}
-        </h3>
+        </Title>
         {displayDescription ? (
           <ProductDescription
             key={descriptionKey}

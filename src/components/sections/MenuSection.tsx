@@ -21,12 +21,14 @@ interface MenuSectionProps {
    */
   allItems?: MenuItem[];
   showAllLink?: boolean;
+  headingLevel?: "h1" | "h2";
 }
 
 export function MenuSection({
   items,
   allItems,
   showAllLink = true,
+  headingLevel = "h2",
 }: MenuSectionProps) {
   const { t } = useLanguage();
   const [filter, setFilter] = useState<MenuFilter>("all");
@@ -36,12 +38,20 @@ export function MenuSection({
   return (
     <section id="menu" className="section-y section-a">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow={t.menu.eyebrow} title={t.menu.title} />
+        <SectionHeading
+          eyebrow={t.menu.eyebrow}
+          title={t.menu.title}
+          level={headingLevel}
+        />
         <DeliveryNote className="mx-auto mb-5 max-w-2xl text-center" />
         <div className="mb-6">
           <ProductFilters active={filter} onChange={setFilter} />
         </div>
-        <ProductGrid products={gridItems} filter={filter} />
+        <ProductGrid
+          products={gridItems}
+          filter={filter}
+          titleLevel={headingLevel === "h1" ? "h2" : "h3"}
+        />
         {showAllLink ? (
           <div className="mt-7 text-center sm:mt-8">
             <Link href="/menu">

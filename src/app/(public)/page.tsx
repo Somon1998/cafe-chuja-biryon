@@ -4,8 +4,19 @@ import { GallerySection } from "@/components/sections/GallerySection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MenuSection } from "@/components/sections/MenuSection";
 import { VipSection } from "@/components/sections/VipSection";
+import {
+  createPageMetadata,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+} from "@/lib/page-metadata";
 import { getFeaturedMenuItems, getMenuItems } from "@/services/menu/menu-service";
 import type { MenuItem } from "@/types/menu";
+
+export const metadata = createPageMetadata({
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  path: "/",
+});
 
 /** Сбалансированный набор featured-позиций для главной (без изменения данных меню). */
 const HOME_FEATURED_SLUGS = [

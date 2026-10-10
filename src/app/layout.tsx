@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
-import { IMAGES } from "@/constants/images";
+import { RestaurantJsonLd } from "@/components/seo/RestaurantJsonLd";
 import { SITE } from "@/constants/site";
+import { HOME_DESCRIPTION, HOME_TITLE } from "@/lib/page-metadata";
+import { isPreviewDeployment } from "@/lib/site-url";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -18,26 +20,41 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.shortName} — ${SITE.tagline}`,
+    default: HOME_TITLE,
     template: `%s | ${SITE.shortName}`,
   },
-  description: SITE.description,
+  description: HOME_DESCRIPTION,
+  applicationName: SITE.shortName,
   openGraph: {
-    title: `${SITE.shortName} — ${SITE.tagline}`,
-    description: SITE.description,
-    url: SITE.url,
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: "/",
     siteName: SITE.shortName,
     locale: "ru_RU",
     type: "website",
-    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: SITE.shortName }],
+    images: [
+      {
+        url: "/images/cafe/exterior-night.png",
+        width: 1298,
+        height: 1212,
+        alt: "Вечерний фасад кафе Чуча Бирён в Бохтаре",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.shortName} — ${SITE.tagline}`,
-    description: SITE.description,
-    images: [IMAGES.hero],
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [
+      {
+        url: "/images/cafe/exterior-night.png",
+        alt: "Вечерний фасад кафе Чуча Бирён в Бохтаре",
+      },
+    ],
   },
-  robots: { index: true, follow: true },
+  robots: isPreviewDeployment()
+    ? { index: false, follow: false }
+    : { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -52,6 +69,7 @@ export default function RootLayout({
       className={`dark ${dmSans.variable} ${playfair.variable}`}
     >
       <body className="min-h-screen antialiased">
+        <RestaurantJsonLd />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

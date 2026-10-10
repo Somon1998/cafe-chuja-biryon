@@ -123,7 +123,7 @@ export const en: Dictionary = {
       grillShowcase: "Food display at Chuja Biryon café",
       mainHallRight: "Hall and display at Chuja Biryon café",
       vipRoom: "VIP room at Chuja Biryon cafe",
-      vipRoom2: "VIP room at Chuja Biryon cafe",
+      vipRoom2: "Another view of the VIP room at Chuja Biryon café",
     },
     lightbox: {
       label: "Gallery photo viewer",

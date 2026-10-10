@@ -1,3 +1,5 @@
+import { resolveSiteUrl } from "@/lib/site-url";
+
 const LATITUDE = 37.8360456;
 const LONGITUDE = 68.7767506;
 
@@ -7,15 +9,19 @@ export const SITE = {
   tagline: "кафе в Бохтаре",
   description:
     "Чуча Бирён — кафе в Бохтаре. Меню, блюда, фотографии, контакты, адрес и режим работы.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  phone: "+992 888 899 311",
-  phoneDisplay: "8888-99-311",
+  url: resolveSiteUrl(),
+  phone: "+992 8888-99-311",
+  /** E.164 для ссылок tel:, без пробелов и дефисов. */
+  phoneTel: "+992888899311",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "992888899311",
   instagramUrl: "https://www.instagram.com/chuja_biryon_bohtar/",
   instagramUsername: "@chuja_biryon_bohtar",
+  streetAddress: "ул. Айни 51",
   address: "ул. Айни 51, Бохтар, Таджикистан",
   city: "Бохтар",
   country: "Таджикистан",
+  opensAt: "09:00",
+  closesAt: "23:00",
   workingHours: "09:00–23:00",
   latitude: LATITUDE,
   longitude: LONGITUDE,

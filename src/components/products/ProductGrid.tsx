@@ -11,6 +11,7 @@ interface ProductGridProps {
   filter: MenuFilter;
   loading?: boolean;
   error?: string | null;
+  titleLevel?: "h2" | "h3";
 }
 
 function filterProducts(products: MenuItem[], filter: MenuFilter): MenuItem[] {
@@ -23,6 +24,7 @@ export function ProductGrid({
   filter,
   loading,
   error,
+  titleLevel = "h3",
 }: ProductGridProps) {
   const { t } = useLanguage();
   const filtered = filterProducts(products, filter);
@@ -63,7 +65,12 @@ export function ProductGrid({
     <AnimatePresence mode="popLayout">
       <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
         {filtered.map((product, index) => (
-          <ProductCard key={product.id} product={product} index={index} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            index={index}
+            titleLevel={titleLevel}
+          />
         ))}
       </div>
     </AnimatePresence>

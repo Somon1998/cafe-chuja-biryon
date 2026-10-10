@@ -1,19 +1,23 @@
 import { MenuSection } from "@/components/sections/MenuSection";
-import { SITE } from "@/constants/site";
+import {
+  createPageMetadata,
+  MENU_DESCRIPTION,
+  MENU_TITLE,
+} from "@/lib/page-metadata";
 import { getMenuItems } from "@/services/menu/menu-service";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Меню",
-  description: `Меню кафе ${SITE.shortName} в Бохтаре.`,
-};
+export const metadata = createPageMetadata({
+  title: MENU_TITLE,
+  description: MENU_DESCRIPTION,
+  path: "/menu",
+});
 
 export default async function MenuPage() {
   const items = await getMenuItems();
 
   return (
     <div className="pt-28">
-      <MenuSection items={items} showAllLink={false} />
+      <MenuSection items={items} showAllLink={false} headingLevel="h1" />
     </div>
   );
 }

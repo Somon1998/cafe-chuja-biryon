@@ -100,7 +100,7 @@ export const ru: Dictionary = {
     eyebrow: "VIP",
     title: "VIP-зал",
     description: "Отдельная уютная зона для отдыха и встреч.",
-    imageAlt: "VIP-зал кафе Чӯҷа Бирён",
+    imageAlt: "VIP-зал кафе Чуча Бирён",
     points: {
       privateRoom: "Отдельный зал",
       gatherings: "Для встреч и отдыха",
@@ -123,7 +123,7 @@ export const ru: Dictionary = {
       grillShowcase: "Витрина с блюдами кафе Чуча Бирён",
       mainHallRight: "Зал и витрина кафе Чуча Бирён",
       vipRoom: "VIP-зал кафе Чуча Бирён",
-      vipRoom2: "VIP-зал кафе Чуча Бирён",
+      vipRoom2: "Второй вид VIP-зала кафе Чуча Бирён",
     },
     lightbox: {
       label: "Просмотр фотографий галереи",

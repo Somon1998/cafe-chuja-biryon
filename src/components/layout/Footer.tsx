@@ -46,9 +46,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#e7ded2]/90">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#e7ded2]/90">
               {t.footer.navigation}
-            </h3>
+            </p>
             <ul className="space-y-2.5">
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -64,17 +64,17 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#e7ded2]/90">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#e7ded2]/90">
               {t.footer.contacts}
-            </h3>
+            </p>
             <ul className="space-y-2.5 text-sm text-[#a99b8b]">
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden />
                 <a
-                  href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                  href={`tel:${SITE.phoneTel}`}
                   className="transition-colors duration-200 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
                 >
-                  {SITE.phoneDisplay}
+                  {SITE.phone}
                 </a>
               </li>
               <li>{t.site.address}</li>
@@ -83,9 +83,9 @@ export function Footer() {
           </div>
 
           <div className="overflow-visible pb-8 md:pb-0">
-            <h3 className="mb-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#e7ded2]/90 md:mb-3">
+            <p className="mb-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#e7ded2]/90 md:mb-3">
               {t.footer.socials}
-            </h3>
+            </p>
             <div className="flex flex-row items-center gap-3 overflow-visible md:gap-2.5">
               <a
                 href={getWhatsAppGeneralLink(locale)}

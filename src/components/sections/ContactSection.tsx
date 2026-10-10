@@ -10,7 +10,11 @@ import { getWhatsAppGeneralLink } from "@/lib/whatsapp";
 import { Clock, MapPin, Navigation, Phone, Truck } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 
-export function ContactSection() {
+export function ContactSection({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
   const { t, locale } = useLanguage();
 
   return (
@@ -24,6 +28,7 @@ export function ContactSection() {
           title={t.contact.title}
           subtitle={t.contact.subtitle}
           className="mb-8"
+          level={headingLevel}
         />
 
         <div className="grid items-stretch gap-5 lg:grid-cols-2 lg:gap-6">
@@ -38,8 +43,8 @@ export function ContactSection() {
                 <ContactItem
                   icon={Phone}
                   title={t.contact.phone}
-                  value={SITE.phoneDisplay}
-                  href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                  value={SITE.phone}
+                  href={`tel:${SITE.phoneTel}`}
                 />
                 <ContactItem
                   icon={WhatsAppIcon}
