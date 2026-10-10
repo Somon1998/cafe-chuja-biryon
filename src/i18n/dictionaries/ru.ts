@@ -1,0 +1,181 @@
+import type { Dictionary } from "@/i18n/types";
+
+export const ru: Dictionary = {
+  common: {
+    whatsapp: "WhatsApp",
+    orderWhatsApp: "Заказать в WhatsApp",
+  },
+  lang: {
+    switcherLabel: "Выбор языка",
+    ru: "Русский",
+    tg: "Тоҷикӣ",
+    en: "English",
+  },
+  nav: {
+    home: "Главная",
+    menu: "Меню",
+    about: "О нас",
+    gallery: "Галерея",
+    contact: "Контакты",
+    fullMenu: "Полное меню",
+    aboutCafe: "О кафе",
+  },
+  header: {
+    homeAria: "— на главную",
+    mainNav: "Основная навигация",
+    tagline: "Кафе в Бохтаре",
+    openMenu: "Открыть меню",
+  },
+  mobileMenu: {
+    closeOverlay: "Закрыть меню",
+    close: "Закрыть",
+    mobileNav: "Мобильное меню",
+  },
+  hero: {
+    eyebrow: "Добро пожаловать на официальный сайт «Чуча Бирён»",
+    title: "Чуча Бирён",
+    subheadline: "Место, где вкусная еда встречается с уютной атмосферой.",
+    description:
+      "Приходите насладиться шашлыками на мангале, горячими блюдами и спокойным отдыхом в уютных кабинах. Для особых встреч у нас есть отдельный VIP-зал. Мы ждём вас каждый день с 09:00 до 23:00.",
+  },
+  menu: {
+    eyebrow: "Меню",
+    title: "Блюда кафе",
+    subtitle: "Первые блюда, салаты, горячее, шашлыки и напитки.",
+    fullMenu: "Полное меню",
+    pageTitle: "Меню",
+    pageDescription: "Меню кафе Чуча Бирён в Бохтаре.",
+    filterAria: "Фильтр категорий меню",
+    emptyTitle: "В этой категории пока нет блюд",
+    emptyHint: "Загляните позже или выберите другую категорию.",
+    loadError: "Не удалось загрузить меню.",
+    loadErrorHint: "Попробуйте обновить страницу.",
+  },
+  categories: {
+    all: "Все",
+    first_courses: "Первые блюда",
+    salads: "Салаты",
+    main_courses: "Вторые блюда",
+    shashlik: "Шашлыки",
+    drinks: "Напитки",
+  },
+  product: {
+    available: "В наличии",
+    unavailable: "Нет в наличии",
+    unavailableShort: "Недоступно",
+    order: "Заказать",
+    showMore: "Показать больше",
+    showLess: "Скрыть",
+    units: {
+      piece: "1 шт.",
+      kg: "1 кг",
+    },
+    variantsAria: "Варианты объёма",
+  },
+  about: {
+    eyebrow: "О нас",
+    title: "Добро пожаловать в Чуча Бирён",
+    subtitle: "Кафе в Бохтаре: зал, кабины и VIP-зона — каждый день с 09:00 до 23:00.",
+    imageAlt: "Главный зал кафе Чуча Бирён",
+    facts: {
+      hours: {
+        title: "09:00–23:00",
+        description: "Каждый день",
+      },
+      vip: {
+        title: "VIP-зал",
+        description: "Отдельная зона для отдыха и встреч",
+      },
+      delivery: {
+        title: "Доставка по Бохтару",
+        description: "Привезём заказ по городу",
+      },
+      freeDelivery: {
+        title: "От 120 сомони",
+        description: "Бесплатная доставка",
+      },
+    },
+  },
+  vip: {
+    eyebrow: "VIP",
+    title: "VIP-зал",
+    description: "Отдельная уютная зона для отдыха и встреч.",
+    imageAlt: "VIP-зал кафе Чӯҷа Бирён",
+    points: {
+      privateRoom: "Отдельный зал",
+      gatherings: "Для встреч и отдыха",
+    },
+  },
+  gallery: {
+    eyebrow: "Галерея",
+    title: "Атмосфера кафе",
+    subtitle: "Зал, кабины и интерьер кафе Чуча Бирён.",
+    openPhoto: (alt) => `Открыть фото: ${alt}`,
+    alts: {
+      exteriorNight: "Фасад кафе Чуча Бирён вечером",
+      mainHallLeft: "Главный зал кафе Чуча Бирён",
+      cabin01: "Интерьер кафе Чуча Бирён",
+      cabin02: "Уютная отдельная кабина кафе Чуча Бирён",
+      cabin03: "Кабина кафе Чуча Бирён",
+      cabin04: "Уютная кабина кафе Чуча Бирён",
+      cabin05: "Зона с кабинами кафе Чуча Бирён",
+      hookahLounge: "Зона отдыха кафе Чуча Бирён",
+      grillShowcase: "Витрина с блюдами кафе Чуча Бирён",
+      mainHallRight: "Зал и витрина кафе Чуча Бирён",
+      vipRoom: "VIP-зал кафе Чуча Бирён",
+      vipRoom2: "VIP-зал кафе Чуча Бирён",
+    },
+    lightbox: {
+      label: "Просмотр фотографий галереи",
+      close: "Закрыть",
+      previous: "Предыдущее фото",
+      next: "Следующее фото",
+    },
+  },
+  contact: {
+    eyebrow: "Контакты",
+    title: "Ждём вас в гости",
+    subtitle: "Приходите лично или закажите через WhatsApp — мы всегда на связи.",
+    address: "Адрес",
+    phone: "Телефон",
+    whatsappWrite: "Написать в WhatsApp",
+    workingHours: "Часы работы",
+    mapTitle: "Карта — расположение кафе",
+    openInMaps: "Открыть в Google Maps",
+    getDirections: "Построить маршрут",
+  },
+  delivery: {
+    title: "Доставка",
+    fee: (amount) => `Доставка по Бохтару — ${amount} сомони.`,
+    freeFrom: (amount) => `При заказе от ${amount} сомони — бесплатно.`,
+  },
+  footer: {
+    navigation: "Навигация",
+    contacts: "Контакты",
+    socials: "Соцсети",
+    rights: "Все права защищены.",
+    tagline: "Кафе в Бохтаре",
+    description:
+      "Чуча Бирён — кафе в Бохтаре. Меню, блюда, фотографии, контакты, адрес и режим работы.",
+  },
+  site: {
+    name: "Чуча Бирён",
+    tagline: "Кафе в Бохтаре",
+    description:
+      "Чуча Бирён — кафе в Бохтаре. Меню, блюда, фотографии, контакты, адрес и режим работы.",
+    workingHours: "Ежедневно 09:00–23:00",
+    address: "ул. Айни 51, Бохтар, Таджикистан",
+  },
+  whatsapp: {
+    order: (name, price, variantLabel) =>
+      `Здравствуйте, хочу заказать: ${name}${variantLabel ? ` (${variantLabel})` : ""} — ${price} сомони.`,
+    general: "Здравствуйте! Хочу сделать заказ в Чуча Бирён.",
+  },
+  orderModal: {
+    title: "Выберите способ заказа",
+    whatsapp: "WhatsApp",
+    instagram: "Instagram",
+    close: "Закрыть",
+    selectVariant: "Выберите объём",
+  },
+};

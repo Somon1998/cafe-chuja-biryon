@@ -1,0 +1,181 @@
+import type { Dictionary } from "@/i18n/types";
+
+export const en: Dictionary = {
+  common: {
+    whatsapp: "WhatsApp",
+    orderWhatsApp: "Order on WhatsApp",
+  },
+  lang: {
+    switcherLabel: "Language",
+    ru: "Russian",
+    tg: "Tajik",
+    en: "English",
+  },
+  nav: {
+    home: "Home",
+    menu: "Menu",
+    about: "About",
+    gallery: "Gallery",
+    contact: "Contact",
+    fullMenu: "Full menu",
+    aboutCafe: "About café",
+  },
+  header: {
+    homeAria: "— home",
+    mainNav: "Main navigation",
+    tagline: "Café in Bokhtar",
+    openMenu: "Open menu",
+  },
+  mobileMenu: {
+    closeOverlay: "Close menu",
+    close: "Close",
+    mobileNav: "Mobile menu",
+  },
+  hero: {
+    eyebrow: "Welcome to the official website of «Chuja Biryon»",
+    title: "Chuja Biryon",
+    subheadline: "Where delicious food meets a warm, cozy atmosphere.",
+    description:
+      "Come enjoy charcoal-grilled kebabs, hot dishes, and a quiet rest in cozy cabins. For special gatherings we have a separate VIP room. We look forward to welcoming you every day from 09:00 to 23:00.",
+  },
+  menu: {
+    eyebrow: "Menu",
+    title: "Café dishes",
+    subtitle: "First courses, salads, mains, shashlik and drinks.",
+    fullMenu: "Full menu",
+    pageTitle: "Menu",
+    pageDescription: "Menu of Chuja Biryon café in Bokhtar.",
+    filterAria: "Menu category filter",
+    emptyTitle: "No dishes in this category yet",
+    emptyHint: "Check back later or choose another category.",
+    loadError: "Could not load the menu.",
+    loadErrorHint: "Try refreshing the page.",
+  },
+  categories: {
+    all: "All",
+    first_courses: "Soups & First Courses",
+    salads: "Salads",
+    main_courses: "Main Courses",
+    shashlik: "Kebabs",
+    drinks: "Beverages",
+  },
+  product: {
+    available: "Available",
+    unavailable: "Out of stock",
+    unavailableShort: "Unavailable",
+    order: "Order",
+    showMore: "Show more",
+    showLess: "Show less",
+    units: {
+      piece: "1 pc.",
+      kg: "1 kg",
+    },
+    variantsAria: "Size options",
+  },
+  about: {
+    eyebrow: "About us",
+    title: "Welcome to Chuja Biryon",
+    subtitle: "A café in Bokhtar: the hall, cabins and a VIP room — daily from 09:00 to 23:00.",
+    imageAlt: "Main hall of Chuja Biryon café",
+    facts: {
+      hours: {
+        title: "09:00–23:00",
+        description: "Every day",
+      },
+      vip: {
+        title: "VIP room",
+        description: "A separate space to relax and meet",
+      },
+      delivery: {
+        title: "Delivery in Bokhtar",
+        description: "Orders delivered across the city",
+      },
+      freeDelivery: {
+        title: "From 120 TJS",
+        description: "Free delivery",
+      },
+    },
+  },
+  vip: {
+    eyebrow: "VIP",
+    title: "VIP Room",
+    description: "A separate, comfortable space to relax and meet.",
+    imageAlt: "VIP room at Chuja Biryon café",
+    points: {
+      privateRoom: "A private room",
+      gatherings: "For meetings and downtime",
+    },
+  },
+  gallery: {
+    eyebrow: "Gallery",
+    title: "Café atmosphere",
+    subtitle: "The hall, cabins, and interior of Chuja Biryon café.",
+    openPhoto: (alt) => `Open photo: ${alt}`,
+    alts: {
+      exteriorNight: "Chuja Biryon cafe exterior at night",
+      mainHallLeft: "Main hall of Chuja Biryon café",
+      cabin01: "Interior of Chuja Biryon café",
+      cabin02: "Cozy private cabin at Chuja Biryon café",
+      cabin03: "Cabin at Chuja Biryon café",
+      cabin04: "Cozy cabin at Chuja Biryon café",
+      cabin05: "Cabin seating at Chuja Biryon café",
+      hookahLounge: "Lounge area at Chuja Biryon café",
+      grillShowcase: "Food display at Chuja Biryon café",
+      mainHallRight: "Hall and display at Chuja Biryon café",
+      vipRoom: "VIP room at Chuja Biryon cafe",
+      vipRoom2: "VIP room at Chuja Biryon cafe",
+    },
+    lightbox: {
+      label: "Gallery photo viewer",
+      close: "Close",
+      previous: "Previous photo",
+      next: "Next photo",
+    },
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "We'd love to see you",
+    subtitle: "Visit us or order via WhatsApp — we're always in touch.",
+    address: "Address",
+    phone: "Phone",
+    whatsappWrite: "Message on WhatsApp",
+    workingHours: "Opening hours",
+    mapTitle: "Map — café location",
+    openInMaps: "Open in Google Maps",
+    getDirections: "Get directions",
+  },
+  delivery: {
+    title: "Delivery",
+    fee: (amount) => `Delivery within Bokhtar — ${amount} TJS.`,
+    freeFrom: (amount) => `Free delivery on orders from ${amount} TJS.`,
+  },
+  footer: {
+    navigation: "Navigation",
+    contacts: "Contacts",
+    socials: "Social",
+    rights: "All rights reserved.",
+    tagline: "Café in Bokhtar",
+    description:
+      "Chuja Biryon is a café in Bokhtar. Menu, dishes, photos, contacts, address and opening hours.",
+  },
+  site: {
+    name: "Chuja Biryon",
+    tagline: "Café in Bokhtar",
+    description:
+      "Chuja Biryon is a café in Bokhtar. Menu, dishes, photos, contacts, address and opening hours.",
+    workingHours: "Daily 09:00–23:00",
+    address: "51 Ayni St, Bokhtar, Tajikistan",
+  },
+  whatsapp: {
+    order: (name, price, variantLabel) =>
+      `Hello, I'd like to order: ${name}${variantLabel ? ` (${variantLabel})` : ""} — ${price} somoni.`,
+    general: "Hello! I'd like to place an order at Chuja Biryon.",
+  },
+  orderModal: {
+    title: "Choose order method",
+    whatsapp: "WhatsApp",
+    instagram: "Instagram",
+    close: "Close",
+    selectVariant: "Choose a size",
+  },
+};
