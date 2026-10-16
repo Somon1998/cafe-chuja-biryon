@@ -637,7 +637,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'main_courses',
     name: {
       tg: 'Қабургаи гӯсфандӣ',
-      ru: 'Баранинные ребрышки («Корона»)',
+      ru: 'Баранинные ребрышки ',
       en: 'Lamb Ribs ("Crown")',
     },
     description: {
