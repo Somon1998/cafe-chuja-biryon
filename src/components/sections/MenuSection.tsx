@@ -40,7 +40,7 @@ export function MenuSection({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={t.menu.eyebrow}
-          title={t.menu.title}
+          title={headingLevel === "h1" ? t.menu.pageTitle : t.menu.title}
           level={headingLevel}
         />
         <DeliveryNote className="mx-auto mb-5 max-w-2xl text-center" />

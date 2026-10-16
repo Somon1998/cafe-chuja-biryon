@@ -19,7 +19,7 @@ export function restaurantJsonLd() {
     "@id": `${SITE.url}/#restaurant`,
     name: SITE.shortName,
     url: SITE.url,
-    telephone: SITE.phone,
+    telephone: SITE.phoneTel,
     image: [`${SITE.url}${IMAGES.hero}`, `${SITE.url}${IMAGES.logo}`],
     address: {
       "@type": "PostalAddress",

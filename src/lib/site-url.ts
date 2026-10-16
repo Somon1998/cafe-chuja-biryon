@@ -17,13 +17,22 @@ function isLocalUrl(url: string): boolean {
   }
 }
 
+/** Случайный *.vercel.app не должен стать публичным canonical. */
+function isVercelAppUrl(url: string): boolean {
+  try {
+    return new URL(url).hostname.endsWith(".vercel.app");
+  } catch {
+    return false;
+  }
+}
+
 /** Канонический production-origin (sitemap, canonical, OG, JSON-LD). */
 const PRODUCTION_SITE_URL = "https://chujai-biryon-bokhtar.com";
 
 /**
  * Публичный origin для canonical, sitemap и Open Graph.
  * Сначала NEXT_PUBLIC_SITE_URL. На Vercel localhost из примера не используется:
- * вместо него берётся основной домен, а не preview/vercel.app URL.
+ * вместо него берётся основной домен. Значения *.vercel.app игнорируются.
  */
 export function resolveSiteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -31,6 +40,9 @@ export function resolveSiteUrl(): string {
 
   if (configured) {
     const normalized = withProtocol(configured);
+    if (isVercelAppUrl(normalized)) {
+      return PRODUCTION_SITE_URL;
+    }
     if (onVercel && isLocalUrl(normalized)) {
       return PRODUCTION_SITE_URL;
     }

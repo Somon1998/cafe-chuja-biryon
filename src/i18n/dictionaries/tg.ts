@@ -43,7 +43,7 @@ export const tg: Dictionary = {
     title: "Таомҳои қаҳвахона",
     subtitle: "Таомҳои якум, хӯришҳо, таомҳои гарм, сихкабобҳо ва нӯшокиҳо.",
     fullMenu: "Менюи пурра",
-    pageTitle: "Меню",
+    pageTitle: "Менюи қаҳвахонаи Чӯҷа Бирён",
     pageDescription: "Менюи қаҳвахонаи Чӯҷа Бирён дар Бохтар.",
     filterAria: "Филтри категорияҳои меню",
     emptyTitle: "Дар ин категория ҳанӯз таом нест",
@@ -137,6 +137,7 @@ export const tg: Dictionary = {
     title: "Мо шуморо интизорем",
     subtitle:
       "Ба таври шахсӣ биёед ё тавассути WhatsApp фармоиш диҳед — мо ҳамеша дар тамосем.",
+    pageTitle: "Тамоси қаҳвахонаи Чӯҷа Бирён",
     address: "Суроға",
     phone: "Телефон",
     whatsappWrite: "Навиштан дар WhatsApp",

@@ -25,7 +25,9 @@ export function ContactSection({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={t.contact.eyebrow}
-          title={t.contact.title}
+          title={
+            headingLevel === "h1" ? t.contact.pageTitle : t.contact.title
+          }
           subtitle={t.contact.subtitle}
           className="mb-8"
           level={headingLevel}

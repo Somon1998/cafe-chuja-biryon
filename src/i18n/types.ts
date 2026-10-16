@@ -113,6 +113,8 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     subtitle: string;
+    /** H1 на странице /contact */
+    pageTitle: string;
     address: string;
     phone: string;
     whatsappWrite: string;

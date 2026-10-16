@@ -17,7 +17,7 @@ export function Footer() {
     () => [
       { href: "/menu", label: t.nav.fullMenu },
       { href: "/#about", label: t.nav.aboutCafe },
-      { href: "/#contact", label: t.nav.contact },
+      { href: "/contact", label: t.nav.contact },
     ],
     [t],
   );
