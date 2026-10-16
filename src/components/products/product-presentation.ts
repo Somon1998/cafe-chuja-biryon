@@ -38,6 +38,7 @@ const MENU_IMAGE_FIT: Record<string, MenuImageFit> = {
   "dum-shurbo": "dum-shurbo",
   plemen: "soup",
   birinjoba: "soup",
+  "red-borscht": "plate-large",
 
   // Salads
   "salad-ovoshnoy": "plate-medium",
@@ -54,6 +55,10 @@ const MENU_IMAGE_FIT: Record<string, MenuImageFit> = {
   "chuja-biryon": "plate-medium",
   "chuja-mangal": "plate-medium",
   "miral-cutlet": "plate-medium",
+  "bogatyr-cutlet": "plate-large",
+  "reza-cutlet": "plate-large",
+  "homemade-cutlet": "plate-large",
+  "chicken-cutlet": "plate-large",
   "kazan-kebab": "plate-medium",
   "chuja-foil": "plate-medium",
   qaburga: "plate-medium",

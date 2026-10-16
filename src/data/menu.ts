@@ -177,6 +177,23 @@ export const MENU_ITEMS: MenuItem[] = [
     sort_order: 60,
     image: '/images/menu/birinchoba.png',
   }),
+  item({
+    slug: 'red-borscht',
+    category: 'first_courses',
+    name: {
+      tg: 'Борши сурх',
+      ru: 'Борщ красный классический',
+      en: 'Traditional Red Borscht',
+    },
+    description: {
+      ru: 'Наваристый традиционный борщ насыщенного цвета с нежным мясом, свёклой, капустой и овощами. Подаётся с густой сметаной, свежей зеленью и ароматными чесночными пампушками.',
+      tg: 'Шӯрбои суннатии серғизо ва хушранг бо лаблабу, карам, омехта ва гӯшти мулоим. Бо қаймоқи ғафс, кабудӣ ва нонҳои сирпиёздори гарм пешкаш мегардад.',
+      en: 'Rich and hearty beetroot soup simmered with tender beef and fresh vegetables, served with a dollop of sour cream, fresh herbs, and warm garlic rolls.',
+    },
+    price: 20,
+    sort_order: 70,
+    image: '/images/menu/red-borscht.png',
+  }),
 
   // --- Хӯришҳо / Салаты ---
   item({
@@ -548,6 +565,74 @@ export const MENU_ITEMS: MenuItem[] = [
     image: '/images/menu/miral-cutlet.png',
   }),
   item({
+    slug: 'bogatyr-cutlet',
+    category: 'main_courses',
+    name: {
+      tg: 'Котлети паҳлавонӣ ',
+      ru: 'Котлеты «Богатырские»',
+      en: '"Bogatyr" Giant Cutlets',
+    },
+    description: {
+      ru: 'Две гигантские 30-сантиметровые сытные котлеты из отборного сочного мяса в золотистой хрустящей панировке. Подаются с изящной розочкой из томата, свежими огурцами и душистым укропом.',
+      tg: 'Ду котлети бузурги шоҳонаи 30-сантиметра бо қимаи сершираи гӯштӣ ва рӯйпӯши тиллоии хурӯсӣ. Бо гули зебои помидорӣ, бодиринги тару тоза ва шибити хушбӯй пешкаш мегардад.',
+      en: 'Two massive 30 cm golden-crisp breaded cutlets packed with savory, juicy meat, artfully garnished with a fresh carved tomato rose, crisp cucumber slices, and fragrant dill.',
+    },
+    price: 30,
+    sort_order: 351,
+    image: '/images/menu/bogatyr-cutlet.png',
+  }),
+  item({
+    slug: 'reza-cutlet',
+    category: 'main_courses',
+    name: {
+      tg: 'Реза котлет',
+      ru: 'Реза котлет / Рубленые котлеты',
+      en: 'Chopped Meat Cutlets',
+    },
+    description: {
+      ru: 'Две большие рубленые котлеты из сочного отборного мяса со сладким перцем и зеленью, обжаренные до золотистой хрустящей корочки. Подаются со свежими огурцами, дольками лимона и укропом.',
+      tg: 'Ду котлети бузурги резакардашуда бо гӯшти нарму болаззат ва пӯсти заррини хурӯсӣ. Бо бодиринги тару тоза, лиму ва шибит (укроп) пешкаш мегардад.',
+      en: 'Two large, tender chopped-meat patties infused with herbs and peppers, pan-fried to golden-crisp perfection, served with fresh cucumbers, lemon wedges, and dill.',
+    },
+    price: 30,
+    sort_order: 352,
+    image: '/images/menu/reza-cutlet.png',
+  }),
+  item({
+    slug: 'homemade-cutlet',
+    category: 'main_courses',
+    name: {
+      tg: 'Котлетҳои хонагӣ',
+      ru: 'Котлеты по-домашнему',
+      en: 'Homemade Cutlets',
+    },
+    description: {
+      ru: 'Две сытные и крупные домашние котлеты из отборного сочного фарша с золотистой хрустящей корочкой. Подаются со свежими томатами, огурцами, лимоном и укропом.',
+      tg: 'Ду котлети бузурги сергӯшти хонагӣ бо қимаи мулоим ва пӯсти заррини бирён. Бо помидор, бодиринги тару тоза, лиму ва кабудии хушбӯй пешкаш мегардад.',
+      en: 'Two large, hearty homemade meat patties grilled to a savory golden crust, juicy and tender inside, garnished with fresh tomatoes, cucumbers, lemon, and dill.',
+    },
+    price: 15,
+    sort_order: 353,
+    image: '/images/menu/homemade-cutlet.png',
+  }),
+  item({
+    slug: 'chicken-cutlet',
+    category: 'main_courses',
+    name: {
+      tg: 'Котлетҳои мурғӣ',
+      ru: 'Куриные котлеты',
+      en: 'Crispy Chicken Cutlets',
+    },
+    description: {
+      ru: 'Две крупные куриные котлеты в аппетитной золотистой хрустящей панировке с нежным и сочным мясом внутри. Подаются со свежими огурцами, помидорами, дольками лимона и укропом.',
+      tg: 'Ду котлети бузурги мурғӣ бо пӯсти заррини хурӯсӣ ва гӯшти ниҳоят нарму сершира. Бо бодиринги тару тоза, помидор, лиму ва кабудӣ пешкаш мегардад.',
+      en: 'Two large golden-crisp chicken cutlets, tender and juicy on the inside, served with fresh cucumber slices, tomatoes, lemon wedges, and garden dill.',
+    },
+    price: 15,
+    sort_order: 354,
+    image: '/images/menu/chicken-cutlet.png',
+  }),
+  item({
     slug: 'qaburga',
     category: 'main_courses',
     name: {
@@ -675,7 +760,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'shashlik',
     name: {
       tg: 'Сихкабоби пора-пора аз гӯшти гов',
-      ru: 'Шашлык кусковой гови',
+      ru: 'Шашлык кусковой говядины',
       en: 'Beef Chunk Shashlik',
     },
     description: {
