@@ -84,7 +84,7 @@ src/data/menu.ts                     — статические данные (Me
 
 1. Подключите репозиторий к Vercel.
 2. Добавьте переменные из `.env.example` (опционально).
-3. `NEXT_PUBLIC_SITE_URL` — ваш production URL.
+3. `NEXT_PUBLIC_SITE_URL` — `https://chujai-biryon-bokhtar.com` (не `*.vercel.app`).
 4. Deploy.
 
 ## Скрипты
